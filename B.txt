@@ -2,7 +2,11 @@
 20233tn137 Aviles Sotelo Christian Jesus
 20233tn149 García Salgado Erick
 20233tn133 Valle Chávez Madai
+<<<<<<< HEAD
 20233tn125 Pulido Gutiérrez Ximena
+=======
+20233tn145 Ocampo Giles Isaac
+>>>>>>> c879d02827b8df313aca6f7c9fc3ed87a154ee3d
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31,3 +35,4 @@
 20233tn134 Martínez Espinosa de los Monteros Diego Iván 
 >>>>>>> d8cd8563ed6e65d4f87780711a2fed2400ef22ba
 >>>>>>> 1e98b9dd7e2945c8300bfa208cab0d1e075b7be7
+2023tn136 Flores Soto Ximena
