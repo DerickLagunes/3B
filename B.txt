@@ -1,5 +1,5 @@
-20233tn182 Jimenez Barcelata Isaac Yo 
 20233tn137 Aviles Sotelo Christian Jesus
+20233tn150 Murga Arcos Angel Santiago
 20233tn149 García Salgado Erick
 20233tn133 Valle Chávez Madai
 20233tn125 Pulido Gutiérrez Ximena
@@ -30,3 +30,5 @@
 20233tn134 Martínez Espinosa de los Monteros Diego Iván 
 >>>>>>> d8cd8563ed6e65d4f87780711a2fed2400ef22ba
 >>>>>>> 1e98b9dd7e2945c8300bfa208cab0d1e075b7be7
+
+20233tn182 Jimenez Barcelata Isaac Yo 
