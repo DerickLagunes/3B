@@ -40,6 +40,9 @@
 20233tn182 Jimenez Barcelata Isaac Yo 
 20233tn125 Pulido Gutiérrez Ximena
 <<<<<<< HEAD
+20233tn131 Axel Solano Castillo 
+=======
+<<<<<<< HEAD
 20233tn144 Nuñez Lucena José Angel 
 
 =======
@@ -51,3 +54,4 @@
 >>>>>>> 96a6206a0db18d7220ade6a98e835d65382ed893
 20233tn112 Negrete Juarez Vanessa 
 20233tn111 PEREZ FUENTES LUIS PABLO
+>>>>>>> 82c3e7642fcec1058d204a116b4be72a4eb51110
