@@ -2,6 +2,15 @@
 20233tn137 Aviles Sotelo Christian Jesus
 20233tn149 García Salgado Erick
 20233tn133 Valle Chávez Madai
+<<<<<<< HEAD
 20233tn128 Torres Méndez Milca
 20223tn121 Delgado Velazquez Josue Jafet
 >>>>>>> 213a92edd3cc67c2907c0fd3137ab244f5adb86e
+=======
+<<<<<<< HEAD
+20223tn121 Delgado Velazquez Josue Jafet  
+20233tn135 Canchola Aguilar Alan Yahir 
+=======
+20223tn121 Delgado Velazquez Josue Jafet
+>>>>>>> 85aeeb1f2858b960fb07317023a6abf520b76126
+>>>>>>> cb4c5aa14d4cc083b97879d6b12c333ad9450a22
