@@ -2,7 +2,6 @@
 20233tn150 Murga Arcos Angel Santiago
 20233tn149 García Salgado Erick
 20233tn133 Valle Chávez Madai
-20233tn125 Pulido Gutiérrez Ximena
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33,3 +32,4 @@
 >>>>>>> 1e98b9dd7e2945c8300bfa208cab0d1e075b7be7
 
 20233tn182 Jimenez Barcelata Isaac Yo 
+20233tn125 Pulido Gutiérrez Ximena
