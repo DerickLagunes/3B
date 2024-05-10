@@ -1,18 +1,23 @@
+20233tn182 Jimenez Barcelata Isaac Yo 
 20233tn137 Aviles Sotelo Christian Jesus
-20233tn150 Murga Arcos Angel Santiago
 20233tn149 García Salgado Erick
 20233tn133 Valle Chávez Madai
+<<<<<<< HEAD
+20233tn125 Pulido Gutiérrez Ximena
+=======
+20233tn145 Ocampo Giles Isaac
+>>>>>>> c879d02827b8df313aca6f7c9fc3ed87a154ee3d
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 20233tn128 Torres Méndez Milca
-20233tn146 Villalobos Hernández Diana
+20233tn113 Perez Bosques Laura Lizet 
 20223tn121 Delgado Velazquez Josue Jafet
 >>>>>>> 213a92edd3cc67c2907c0fd3137ab244f5adb86e
 =======
 20223tn121 Delgado Velazquez Josue Jafet
-
 20233tn116 Ocampo Flores Jonathan
+
 >>>>>>> d2e6e8871e5808b5362874847472a139b582b2d1
 =======
 20233tn124 Gomez Nava Diego Daniel
@@ -30,8 +35,17 @@
 20233tn134 Martínez Espinosa de los Monteros Diego Iván 
 >>>>>>> d8cd8563ed6e65d4f87780711a2fed2400ef22ba
 >>>>>>> 1e98b9dd7e2945c8300bfa208cab0d1e075b7be7
+<<<<<<< HEAD
 
 20233tn182 Jimenez Barcelata Isaac Yo 
 20233tn125 Pulido Gutiérrez Ximena
+<<<<<<< HEAD
 20233tn144 Nuñez Lucena José Angel 
 
+=======
+
+20233tn143 Pedraza López Oscar Giovanni
+=======
+2023tn136 Flores Soto Ximena
+>>>>>>> ee7c6bd81f36aa868f24558e329d14b90c3ec08c
+>>>>>>> 96a6206a0db18d7220ade6a98e835d65382ed893
