@@ -1,4 +1,4 @@
-20233tn182 Jimenez Barcelata Isaac Yo 
+blo20233tn182 Jimenez Barcelata Isaac Yo 
 20233tn137 Aviles Sotelo Christian Jesus
 20233tn149 García Salgado Erick
 20233tn133 Valle Chávez Madai
@@ -46,8 +46,7 @@
 20233tn144 Nuñez Lucena José Angel 
 
 =======
-
-20233tn143 Pedraza López Oscar Giovanni yo:)
+20233tn143 Pedraza López Oscar Giovanni, otra vez:)
 =======
 2023tn136 Flores Soto Ximena
 >>>>>>> ee7c6bd81f36aa868f24558e329d14b90c3ec08c
