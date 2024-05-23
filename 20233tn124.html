@@ -4,6 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poyecto1</title>
+    <style>
+        /* Estilo del contenedor del carrusel */
+        .carousel {
+            position: relative;
+            max-width: 300px;
+            margin: auto;
+            overflow: hidden;
+        }
+        /* Estilo de las imágenes del carrusel */
+        .carousel img {
+            width: 100%;
+            display: none; /* Ocultar todas las imágenes por defecto */
+        }
+        /* Mostrar la imagen activa */
+        .carousel img.active {
+            display: block;
+        }
+        /* Estilo de los botones de navegación */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        /* Botón "anterior" */
+        .prev {
+            left: 10px;
+        }
+        /* Botón "siguiente" */
+        .next {
+            right: 10px;
+        }
+    </style>
 </head>
 <body>
     <p>Diego Daniel Gomez Nava</p>
@@ -12,6 +49,34 @@
     <p>20233tn124</p>
     <p>Nivel Medio superior</p>
     <p>Dormir</p>
-     <img src="Imagenes/cat.webp" alt="Este es un pato">
+    <div class="carousel">
+        <!-- Imágenes del carrusel -->
+        <img src="img/imggato1.jpg" alt="Imagen 1" class="active">
+        <img src="img/imggato2.jpg" alt="Imagen 2">
+        <img src="img/imggato3.jpg" alt="Imagen 3">
+        <img src="img/imggato4.jpg" alt="Imagen 4">
+        <img src="img/imggato5.jpg" alt="Imagen 5">
+        <!-- Botones de navegación -->
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button> <!-- "&#10094;" es un simbolo -->
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+    <script>
+        // Variable para rastrear el índice de la imagen actual
+        let currentSlide = 0;
+
+        // Obtener todas las imágenes del carrusel
+        const slides = document.querySelectorAll('.carousel img');
+
+        // Función para cambiar de imagen
+        function changeSlide(direction) {
+            // Ocultar la imagen actual
+            slides[currentSlide].classList.remove('active');
+            // Calcular el nuevo índice de la imagen a mostrar
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            // Mostrar la nueva imagen
+            slides[currentSlide].classList.add('active');
+        }
+
+    </script>
 </body>
 </html>
