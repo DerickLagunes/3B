@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carrusel Xim</title>
+    <style>
+        .carousel {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+            overflow: visible;
+        }
+        .carousel img {
+            width: 100%;
+            display: none;
+        }
+        .carousel img.active {display: block;}
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .prev {left: 10px;}
+        .next {right: 10px;}
+    </style>
+</head>
+<body style="background-color: rosybrown;">
+    <div class="carousel">
+        <img src="img/japon1.jpg" alt="Paisaje 1" class="active">
+        <img src="img/japon2.jpg" alt="Paisaje 2">
+        <img src="img/japon3.jpg" alt="Paisaje 3">
+        <img src="img/japon4.jpg" alt="Paisaje 4">
+        <img src="img/japon5.jpg" alt="Paisaje 5">
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button> 
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+    <script>
+        let currentSlide = 0;
+   
+        const slides = document.querySelectorAll('.carousel img');
+        
+        function changeSlide(direction) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+    </script>
+
+    <p style="color: aqua;">Ximena Flores Soto</p>
+    <p style="color: aqua;">3B</p>
+    <p style="color: aqua;">Carrusel de imagenes</p>
+
+</body>
+</html>

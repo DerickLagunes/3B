@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Primer Trabajo</title>
+</head>
+<body>
+    
+<center><p>Christian Jesus Aviles Sotelo</p></center>
+<p>Carrera: <strong>DSM</strong> Grupo: <strong>3B</strong></p>
+<P>Matricula <strong>20233TN137</strong></P>
+<p>Estudios: Bachilleres no.1</p>
+<p><strong>Mis pasatiempos:</strong></p>
+<p>Me gusta escuchar musica en todo momento, y soy fanatico de los corridos tumbados</p>
+
+<div class="image-container">
+    <img id="image" src="img/chris1.jpg" alt="nata">
+</div>
+<div class="buttons">
+    <button id="prev">Anterior</button>
+    <button id="next">Siguiente</button>
+</div>
+
+<script>
+    // Arreglo de URLs de las imágenes
+    const images = [
+        'img/chris1.jpg',
+        'img/chris2.jpg',
+        'img/chris3.jpeg',
+        'img/chris4.jpg',
+        'img/chris5.jpg'
+    ];
+
+    // Índice de la imagen actual
+    let currentIndex = 0;
+
+    // Elementos del DOM
+    const imageElement = document.getElementById('image');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+
+    // Función para actualizar la imagen mostrada
+    function actualizarImg() {
+        imageElement.src = images[currentIndex];
+    }
+
+    // EventListeners para los botones
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+        actualizarImg();
+    });
+
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+        actualizarImg();
+    });
+
+    actualizarImg();
+</script>
+
+</body>
+</html>

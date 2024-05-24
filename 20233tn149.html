@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=”utf-8”>
+	<title>Mi página de prueba</title>
+</head>
+  <body>   
+    <h1 id="titulo1">MI PRIMERA PÁGINA :D</h1>
+
+    <style>
+      *{
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      #titulo1{
+        width: 100%;
+        text-align: center;
+        margin: 30px auto;
+      }
+      .info_container{
+        padding: 20px; 
+      }
+      #carrusel_container{
+        width: 60%;
+        height: 400px;
+        /* border: 2px solid black; */
+        margin: 40px auto;
+        position: relative;
+        border-radius: 10px;
+      }
+      .btn_carrusel{
+        border-radius: 50%;
+        border: none;
+        margin: 10px;
+        transition: all 300ms;
+        width: 50px;
+        height: 50px;
+        font-size: 2em;
+        font-weight: bold;
+        position: absolute;
+        cursor: pointer;
+      }
+      .btn_carrusel:hover{
+        background-color: #aaa;
+        transform: scale(1.1);
+      }
+      #anterior{     
+        top: 45%;
+        left: 0;
+      }
+      #posterior{
+        top: 45%;
+        right: 0;
+        width: 50px;
+      }
+      #img_carrusel{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+        transition: all 400ms ease;
+      }
+
+    </style>
+
+    <div id="carrusel_container">
+      <img id="img_carrusel" src="" alt="img_carrusel">
+      <button class="btn_carrusel" id="anterior"><</button>
+      <button class="btn_carrusel" id="posterior">></button>
+    </div>
+
+    <div class="info_container">
+      <strong>Nombre: </strong>
+      <p>Erick García Salgado</p>
+      <strong>Carrera: </strong>
+      <p>Desarrollo de software multiplataforma</p>
+      <strong>Correo institucional: </strong>
+      <p>20233tn149@utez.edu.mx</p>
+      <strong>Matrícula: </strong>
+      <p>20233tn149@utez.edu.mx</p>
+      <strong>Estudios (medio superior): </strong>
+      <p>Técnico laboratorista en electrónica digital</p>
+      <hr>
+      <strong>Pasatiempos </strong>
+    <ul>
+      <li>Jugar basketball</li>
+      <li>Tocar la guitarra</li>
+      <li>Salir con amigos</li>
+      <li>Ver series con mi familia</li>
+      <li>Escuchar música</li>
+      <li>Nadar</li>
+      <li>Ver películas</li>
+    </ul>
+    </div>
+
+    
+    <img id="chikapu" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZctKxZkFuYXmr4NBhcbpTxLWFqhNkhRnLgJfY823eJw&s" alt="chikapu">
+
+    <script>
+      const d = document, c = console;
+      const imgArr = [
+        "https://i.redd.it/iris-haxorus-vs-cynthias-garchomp-an-analysis-on-why-it-v0-898564ijgnjb1.jpg?width=1908&format=pjpg&auto=webp&s=e4feecddcad40bb4a1cde9d1445c481009190aa6",
+        "https://i0.wp.com/www.gamerfocus.co/wp-content/uploads/2020/02/pokemon_anime_10.jpg?resize=740%2C389&ssl=1",
+        "https://cdn.alfabetajuega.com/alfabetajuega/2021/06/Ash-VS-Corelia-Pikachu-VS-Mega-Lucario-2.jpg",
+        "https://pbs.twimg.com/media/Ef8IOJhWoAAMpct.jpg",
+        "https://areajugones.sport.es/wp-content/uploads/2020/11/Anime-de-Pokemon-Copa-Junior-Dragonite-Iris-vs-Krookodile-Ash.jpg"
+      ];
+
+      const $img = d.getElementById("img_carrusel");
+      
+      $img.setAttribute("src",imgArr[0]);
+
+      const $posteriorBtn = d.getElementById("posterior");
+      const $anteriorBtn = d.getElementById("anterior");
+      
+      let positionImg=0; 
+      
+      function posterior(){
+        if(positionImg == imgArr.length-1){
+          positionImg=0;
+        }
+        positionImg++;  
+        $img.setAttribute("src",imgArr[positionImg]);
+      }
+
+      function anterior(){
+        if(positionImg==0){
+          positionImg=imgArr.length;
+        }
+        positionImg--;
+        $img.setAttribute("src",imgArr[positionImg]);  
+      }
+      
+      $posteriorBtn.addEventListener("click",posterior);
+      $anteriorBtn.addEventListener("click",anterior);
+
+    </script>
+
+
+  </body>
+</html>
+
