@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <center>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Carrusel</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/estilos.css'>
+</head>
+<body>
+    <h1> Carrusel de Imágenes</h1>
+    <img id="imagen" src="img/imgVane1.jpeg" alt="Imagen"><br><br>
+    <input type="image" id="anterior" src="img/VJ_botonAnterior.png" />
+    <input type="image" id="siguiente" src="img/VJ_botonSiguiente.png"/>
+    <script>
+        //Crear array con imágenes
+        var Imagenes = ["imgVane1.jpeg", "imgVane2.jpeg", "imgVane3.jpeg", "imgVane4.jpeg", "imgVane5.jpeg"]
+        
+        var imagenActual = 0;
+
+        document.getElementById("anterior").addEventListener("click", cambiarImagen);
+        document.getElementById("siguiente").addEventListener("click", cambiarImagen);
+
+        function cambiarImagen(){
+            var boton = this.id;
+            if (boton == 'anterior'){
+                imagenActual --;
+                if(imagenActual < 0){
+                    imagenActual = Imagenes.length - 1;
+                }
+            }else{
+                imagenActual ++;
+                if(imagenActual == Imagenes.length){
+                    imagenActual = 0;
+                }
+            }
+            var mostrarImagen = Imagenes [imagenActual];
+            document.getElementById("imagen").src = "img/" + mostrarImagen;
+        }
+    </script>
+    
+</body>
+</center>
+</html>
