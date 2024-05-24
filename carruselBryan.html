@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentación de Imágenes</title>   
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    #image-container {
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div id="image-container">
+    <img id="displayed-image" src="" alt="Imagen">
+  </div>
+  <div>
+    <button id="prevBtn">Anterior</button> 
+    <button id="nextBtn">Siguiente</button>
+  </div>
+
+  <script>
+    const images = [
+      "img/bryan1.jpeg.jpg.",
+      "img/bryan2.jpeg.jpg",
+      "img/bryan3.jpeg.jpg",
+      "img/bryan4.jpeg.jpg",
+      "img/bryan5.jpeg.jpg"
+    ];
+
+    const displayedImage = document.getElementById("displayed-image");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    let currentIndex = 0;
+
+    function showImage(index) {
+      displayedImage.src = images[index];
+    }
+
+    function showPrevImage() {
+      currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+      showImage(currentIndex);
+    }
+
+    function showNextImage() {
+      currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+      showImage(currentIndex);
+    }
+
+    prevBtn.addEventListener("click", showPrevImage);
+    nextBtn.addEventListener("click", showNextImage);
+
+    // Mostrar la primera imagen al cargar la página
+    showImage(currentIndex);
+  </script>
+</body>
+</html>
