@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <center>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Carrusel</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/estilos.css'>
+</head>
+<body>
+    <h1> Carrusel de Imágenes</h1>
+    <img id="imagen" src="img/1.webp" alt="Imagen"><br><br>
+    <input type="button" id="anterior" value="<<" />
+    <input type="button" id="siguiente" value=">>"/>
+    <script>
+        //Crear array con imágenes
+        var Imagenes = ["1.webp", "2.webp", "3.webp", "4.webp", "5.webp"]
+        
+        var imagenActual = 0;
+
+        document.getElementById("anterior").addEventListener("click", cambiarImagen);
+        document.getElementById("siguiente").addEventListener("click", cambiarImagen);
+
+        function cambiarImagen(){
+            var boton = this.id;
+            if (boton == 'anterior'){
+                imagenActual --;
+                if(imagenActual < 0){
+                    imagenActual = Imagenes.length - 1;
+                }
+            }else{
+                imagenActual ++;
+                if(imagenActual == Imagenes.length){
+                    imagenActual = 0;
+                }
+            }
+            var mostrarImagen = Imagenes [imagenActual];
+            document.getElementById("imagen").src = "img/" + mostrarImagen;
+        }
+    </script>
+    
+</body>
+</center>
+</html>
