@@ -1,18 +1,17 @@
 
-let anterior = document.getElementById("siguiente");
-let siguiente = document.getElementById("anterior");
+let anterior = document.getElementById("anterior");
+let siguiente = document.getElementById("siguiente");
 let contenedor = document.querySelector(".carousel-slide");
+let img = ["img/alan1.jpg","img/alan2.jpeg","img/alan3.jpg","img/alan4.jpg","img/alan5.jpeg"];
 
-let img = ["jsc/img/alan1.jpg","jsc/img/alan2.jpg","jsc/img/alan3.jpg","jsc/img/alan4.jpg","jsc/img/ala51.jpg"];
+let contador = 0;
 
 img.forEach((arreglo) => {
-    let img = document.createElement("img");
-    img.src = arreglo;
-    img.alt = "Autos deportivos";
-    contenedor = img.appendChild(img);
+    let img1 = document.createElement("img");
+    img1.src = arreglo;
+    img1.alt = "Autos deportivos";
+    contenedor.appendChild(img1);
 });
-
-let contador = 0; 
 
 anterior.addEventListener("click", () => {
     if (contador >= img.length - 1) return;
@@ -20,9 +19,8 @@ anterior.addEventListener("click", () => {
     contenedor.style.transform = `translateX(${-contador * 100}%)`;
   });
   
-  prevBtn.addEventListener("click", () => {
+  siguiente.addEventListener("click", () => {
     if (contador <= 0) return;
     contador--;
     contenedor.style.transform = `translateX(${-contador * 100}%)`;
   });
-  
