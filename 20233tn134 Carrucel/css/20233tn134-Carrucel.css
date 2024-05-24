@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.carouselContainer {
+    text-align: center;
+    height: 720px;
+    position: relative;
+}
+img {
+    width: 1280px;
+    height: 720px;
+}
+.imgContainer{
+border: 1px solid black;
+height: 100%;
+width: 100%;
+}
+.botonesContainer{
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+}
+#anteriorBoton{
+    height: 50px;
+    height: 70px;
+    font-size: 20px;
+}
+#siguienteBoton{
+    height: 50px;
+    height: 70px;
+    font-size: 20px;
+}
