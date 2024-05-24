@@ -68,12 +68,4 @@ h1, h2, h3, h4, h5, p {
 .carrusel-button:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
-.footer {
-    background-color: #f6d7ffc5;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
+
