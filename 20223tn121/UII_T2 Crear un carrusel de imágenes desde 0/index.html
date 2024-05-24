@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20223tn121</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <img id="img_id" src="img/img1.jpg" alt="prueba">
+    <button id="anterior">ANTERIOR</button>
+    <button id="siguiente">SIGUIENTE</button>
+
+    <script>
+      
+        const img = [
+            'img/img1.jpg',
+            'img/img2.jpg',
+            'img/img3.jpg',
+            'img/img4.jpg',
+            'img/img5.jpg'
+        ];
+
+        const imgElement = document.getElementById('img_id');
+        const anteriorBtn = document.getElementById('anterior');
+        const siguienteBtn = document.getElementById('siguiente');
+
+       
+        let indice = 0;
+
+      
+        function mostrarImagen() {
+            imgElement.src = img[indice];
+        }
+
+      
+        function mostrarAnterior() {
+            indice = (indice - 1 + img.length) % img.length;
+            mostrarImagen();
+        }
+
+        
+        function mostrarSiguiente() {
+            indice = (indice + 1) % img.length;
+            mostrarImagen();
+        }
+
+        anteriorBtn.addEventListener('click', mostrarAnterior);
+        siguienteBtn.addEventListener('click', mostrarSiguiente);
+
+        mostrarImagen();
+    </script>
+</body>
+
+</html>
