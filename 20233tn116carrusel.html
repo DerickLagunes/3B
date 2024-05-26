@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Halo</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+</head>
+<body>
+
+    <h1 class="title">EL MEJOR JUEGO DE LA HISTORIA</h1>
+
+    <div class="contenedor">
+        <div class="atras_btn">
+            &#60
+        </div>
+
+        <div class="adelante_btn">
+            &#62
+        </div>
+
+        <img src="img/infinite.jpg" alt="Halo infinite">
+    </div>
+
+    <h1> Jonathan Ocampo Flores </html>
+        <h2> DSM 3-B </h2>
+        <p>20233tn116@utez.edu.mx</p>
+        <p>20233tn116</p>
+        <p>Universidad UTEZ</p>
+        <h3>Mis pasatiempos:</h3>
+        <p>Jugar Basquetbol, escuchar musica, jugar con mis perritos</p>
+
+    <style>
+        body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.contenedor {
+    position: relative;
+    width: 100%; 
+    max-width: 700px; 
+}
+
+.contenedor img {
+    width: 100%;
+    height: auto; 
+    display: block;
+    border-radius: 10px;
+    transition: 2s;
+}
+
+.atras_btn, .adelante_btn {
+    position: absolute;
+    width: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(39, 58, 228);
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+}
+
+.atras_btn {
+    left: -50px;
+}
+
+.adelante_btn {
+    right: -50px;
+}
+
+.atras_btn:hover, .adelante_btn:hover {
+    transition-duration: .6s;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+    </style>    
+
+
+    <script>
+        var imagenes = ['img/halo3.jpg', 'img/halo4.jpg', 'img/haloWars.jpg', 'img/infinite.jpg', 'img/spiritFire.jpg']
+    cont = 0;
+
+
+function carrusel (contenedor){
+    contenedor.addEventListener('click', e =>{
+        let atras = contenedor.querySelector('.atras_btn'),
+        adelante = contenedor.querySelector('.adelante_btn'),
+        img = contenedor.querySelector('img'),
+        tgt = e.target;
+
+        if(tgt.classList.contains('atras_btn')){
+            cont--;
+            if(cont < 0){
+                cont = imagenes.length - 1;
+            }
+            img.setAttribute('src', imagenes[cont]);
+        }else if(tgt.classList.contains('adelante_btn')){
+            cont++;
+            if(cont > imagenes.length - 1){
+                cont = 0;
+            }
+            img.setAttribute('src', imagenes[cont]);
+        }
+    });
+}  
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    let contenedor = document.querySelector('.contenedor');
+
+    carrusel(contenedor);
+});
+    </script>
+</body>
+</html>
