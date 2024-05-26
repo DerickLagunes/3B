@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Persona</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const nombres = urlParams.get('nombres');
+            const apellidos = urlParams.get('apellidos');
+            const correo = urlParams.get('correo');
+            const fechaNacimiento = urlParams.get('fechaNacimiento');
+            const telefono = urlParams.get('telefono');
+            const usuario = urlParams.get('usuario');
+            const contrasena = urlParams.get('contrasena');
+            const repetirContrasena = urlParams.get('repetirContrasena');
+            const registroForm = document.getElementById('registroForm');
+
+            document.getElementById('nombres').textContent = nombres;
+            document.getElementById('apellidos').textContent = apellidos;
+            document.getElementById('correo').href = `mailto:${correo}`;
+            document.getElementById('correo').textContent = correo;
+            document.getElementById('telefono').href = `tel:${telefono}`;
+            document.getElementById('telefono').textContent = telefono;
+            
+            const fechaNacimientoDate = new Date(fechaNacimiento);
+            const edad = new Date().getFullYear() - fechaNacimientoDate.getFullYear();
+            document.getElementById('edad').textContent = `Edad: ${edad} años`;
+
+            const mensaje = document.getElementById('mensaje');
+            if (contrasena !== repetirContrasena) {
+                mensaje.textContent = "Las contraseñas no coinciden";
+            } else if (contrasena.length < 5) {
+                mensaje.textContent = "Su contraseña es insegura";
+            } else {
+                mensaje.textContent = "";
+            }
+
+            const registros = JSON.parse(localStorage.getItem('registros')) || [];
+            registros.push({ nombres, apellidos, correo, fechaNacimiento, telefono, usuario });
+            localStorage.setItem('registros', JSON.stringify(registros));
+            
+            const registrosDiv = document.getElementById('registros');
+            registrosDiv.innerHTML = "";
+            registros.forEach(registro => {
+                const registroElement = document.createElement('div');
+                registroElement.textContent = `Nombres: ${registro.nombres}, Apellidos: ${registro.apellidos}, Correo: ${registro.correo}, Teléfono: ${registro.telefono}, Usuario: ${registro.usuario}`;
+                registrosDiv.appendChild(registroElement);
+            });
+
+            document.getElementById('volver').addEventListener('click', () => {
+                window.history.back();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1 id="nombres"></h1>
+    <h2 id="apellidos"></h2>
+    <p>Correo: <a id="correo"></a></p>
+    <p>Teléfono: <a id="telefono"></a></p>
+    <p id="edad"></p>
+    <p id="mensaje" style="color: red;"></p>
+    <h3>Registros anteriores</h3>
+    <div id="registros"></div>
+    <button id="volver">Regresar</button>
+</body>
+</html>
