@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de la Persona</title>
+    <link rel="stylesheet" href="estilos_A.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="nombres"></h1>
+        <h2 id="apellidos"></h2>
+        <p>Correo: <a id="correo" href=""></a></p>
+        <p>Teléfono: <a id="telefono" href=""></a></p>
+        <p>Edad: <span id="edad"></span> años</p>
+    </div>
+
+    <script>
+        function getParameterByName(name) {
+            const url = new URL(window.location.href);
+            return url.searchParams.get(name);
+        }
+
+        function calculateAge(birthday) {
+            const birthDate = new Date(birthday);
+            const today = new Date();
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const monthDifference = today.getMonth() - birthDate.getMonth();
+
+            if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            return age;
+        }
+
+        document.getElementById("nombres").textContent = getParameterByName("nombres");
+document.getElementById("apellidos").textContent = getParameterByName("apellidos");
+
+const correo = getParameterByName("correo");
+const telefono = getParameterByName("telefono");
+
+document.getElementById("correo").textContent = correo;
+document.getElementById("correo").href = "https://mail.google.com/mail/?view=cm&fs=1&to=" + correo;
+
+document.getElementById("telefono").textContent = telefono;
+document.getElementById("telefono").href = "tel:" + telefono;
+
+const fechaNacimiento = getParameterByName("fechaNacimiento");
+document.getElementById("edad").textContent = calculateAge(fechaNacimiento);
+
+    </script>
+</body>
+</html>
+
