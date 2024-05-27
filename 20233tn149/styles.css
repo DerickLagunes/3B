@@ -1,7 +1,7 @@
 *{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
-  #titulo1{
+  .titulo1{
     width: 100%;
     text-align: center;
     margin: 30px auto;
@@ -49,4 +49,20 @@
     object-fit: cover;
     border-radius: inherit;
     transition: all 400ms ease;
+  }
+
+  .ul_proyectos{
+    width: 60%;
+    border: 3px solid #333;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 20px;
+    list-style: square;
+    background: #dddd;
+  }
+
+  .ul_proyectos li {
+    margin-left: 30px;
+    font-weight: bold;
+    color: #222;
   }

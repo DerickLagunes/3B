@@ -1,0 +1,58 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#formPersona{
+    width: 30%;
+    margin: 20px auto;
+    /* height: 200px; */
+    border: 4px solid #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: aquamarine;
+}
+
+input[type="submit"] {
+    width: 200px;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms;
+    cursor: pointer;
+}
+
+
+input[type="submit"]:hover{
+    transform: scale(1.05);
+}
+
+#formPersona input{
+    height: 35px;
+    border-radius: 15px;
+    border: 3px solid #222;
+    padding: 8px;
+    color: #222;
+}
+
+.titulo_persona{
+    width: 100%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.info_persona{
+    width: 60%;
+    margin: 20px auto;
+    border: 4px solid #222;
+    border-radius: 10px;
+    padding: 20px;
+}
+.info_persona * {
+    margin: 20px auto;
+    display: block;
+}
