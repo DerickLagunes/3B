@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="js/script.js"></script>
+
+    <form id="miformulario" action="verPersona.html" method="get" onsubmit="return validarFormulario()">
+
+        <label for="Nombre">Nombre: </label>
+        <br>
+        <input type="text" id="Nombre" name="Nombre">
+
+        <br>
+        <label for="Apellido">Apellido:</label>
+        <br>
+        <input type="text"  id="Apellido" name="Apellido">
+        <br>
+
+        <label for="Correo">Correo:</label>
+        <br>
+        <input type="email" id="Correo" name="Correo">
+        <br>
+
+        <label for="Fecha_nacimiento">Fecha de nacimient: </label>
+        <br>
+        <input type="date" id="Fecha_nacimiento" name="Fecha_nacimiento">
+        <br>
+
+        <label for="Telefono">Telefono</label>
+        <br>
+        <input type="tel" id="Telefono" name="Telefono">
+        <br>
+
+        <label for="Usuario">Usuario</label>
+        <br>
+        <input type="text" id="Usuario" name="Usuario">
+        <br>
+
+        <label for="contraseña">contraseña</label>
+        <br>
+        <input type="password" id="contraseña" name="contraseña">
+        <br>
+
+        <label for="Rep_contra">Repetir contraseña</label>
+        <br>
+        <input type="password" id="Rep_contra" name="Rep_contra">
+
+    </form>
+    <button type="submit">Enviar</button>
+</body>
+
+</html>
