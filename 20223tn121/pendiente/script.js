@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded' , () => {
 
         try {
             
-            const respuesta = await fetch('https://webhook.site/b53ba123-9bf4-4b2f-b6ab-06bc519ca48a', 
+            const respuesta = await fetch('http://192.168.107.135:5000/api/data', 
             {
                 method: 'POST',
                 headers: {
