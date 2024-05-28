@@ -8,7 +8,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const urlParams = new URLSearchParams(window.location.search);
-            const nombres = urlParams.get('nombres');
+            const nombres = urlParams.get('nombre');
             const apellidos = urlParams.get('apellidos');
             const correo = urlParams.get('correo');
             const fechaNacimiento = urlParams.get('fechaNacimiento');
@@ -18,7 +18,7 @@
             const repetirContrasena = urlParams.get('repetirContrasena');
             const registroForm = document.getElementById('registroForm');
 
-            document.getElementById('nombres').textContent = nombres;
+            document.getElementById('nombre').textContent = nombres;
             document.getElementById('apellidos').textContent = apellidos;
             document.getElementById('correo').href = `mailto:${correo}`;
             document.getElementById('correo').textContent = correo;
@@ -42,7 +42,7 @@
 </head>
 <body>
     <center>
-    <h1 id="nombres"></h1>
+    <h1 id="nombre"></h1>
     <h2 id="apellidos"></h2>
     <p>Correo: <a id="correo"></a></p>
     <p>Teléfono: <a id="telefono"></a></p>
