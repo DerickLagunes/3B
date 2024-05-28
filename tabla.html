@@ -1,0 +1,48 @@
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody id="tbody">
+        
+    </tbody>
+</table>
+<script src="Tarea.js" ></script>
+<script>
+    let tarea1 = new Tarea("Dormir","Dormir mis 8 horas");
+    let tarea2 = new Tarea("Comer","comer sano y llenador");
+    let tarea3 = new Tarea("Descansar","1 hora de descanso");
+    let tarea4 = new Tarea("Hacer tarea","de aplicaciones web");
+    let tarea5 = new Tarea("Ver al perro","Quiere ir a pasear");
+
+    let tareas = [tarea1,tarea2,tarea3,tarea4,tarea5];
+
+    function hacerTabla(){
+        let tbody = document.getElementById("tbody");
+        tbody.innerHTML = "";
+        tareas.forEach(tarea => {
+            //console.log(tarea.nombre);
+            //Crea una nueva fila de tabla (tr)
+            let fila = document.createElement("tr");
+            //Crear una nueva celda de datos (td)
+            let nombre = document.createElement("td");
+            let descripcion = document.createElement("td");
+            let estado = document.createElement("td");
+            //Llenar los elementos td con información
+            nombre.innerText = tarea.nombre;
+            descripcion.innerText = tarea.descripcion;
+            tarea.completado ? estado.innerText = "Tarea completada" : estado.innerText = "Incompleta";
+
+            //Vamos a poner las etiquetas en la tabla
+            tbody.appendChild(fila);
+            fila.appendChild(nombre);
+            fila.appendChild(descripcion);
+            fila.appendChild(estado);
+
+        });
+    }
+    
+</script>

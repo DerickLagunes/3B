@@ -1,0 +1,18 @@
+<p id="n1">9</p>
+<p id="n2">11</p>
+<!-- 11 + 9 = 20 -->
+<hr>
+<h3 id="res">###</h3>
+
+<script>
+    function sumar(n1, n2){
+        return n1+n2;
+    }
+    //alert(sumar(9,11));
+    //obtener valores desde html
+    var n1 = document.getElementById("n1").innerText;
+    var n2 = document.getElementById("n2").innerText;
+    //pintar el valor en html
+    document.getElementById("res").
+    innerText = sumar(parseInt(n1),parseInt(n2));
+</script>

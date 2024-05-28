@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="tools.js"></script>
+</head>
+<body>
+    <h1>Registro de producto</h1>
+    <form action="verProducto.html">
+        <label>Nombre del producto: <input type="text" 
+        name="nombreProducto" id="nombreProducto" 
+        placeholder="Introduce el nombre del producto" 
+        maxlength="10"/>
+        </label>
+        <br>
+        <label>Código del producto: <input type="text" 
+        name="codigoProducto" id="codigoProducto" 
+        placeholder="Introduce el código del producto" />
+        </label>
+        <br>
+        <label>Precio del producto: <input type="number" 
+        name="precioProducto" id="precioProducto" 
+        placeholder="Introduce el precio del producto" />
+        </label>
+        <br>
+        <label>Unidades en inventario: <input type="number" 
+        name="unidadesProducto" id="unidadesProducto" 
+        placeholder="¿Cuantas unidades hay?" />
+        </label>
+        <br>
+        <label>Descripción: <input type="text" 
+        name="descripcionProducto" id="descripcionProducto" 
+        placeholder="Introduce la descripción del producto" />
+        </label>
+        <!--Antes de que se cierre el form debemos
+        meter una forma de mandar el formulario-->
+        <br>
+        <input type="submit" value="Registrar producto" />
+    </form> 
+</body>
+</html>
