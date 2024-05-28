@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Usuario</title>
+</head>
+<body>
+    <h1>Información de Usuario</h1>
+    <div id="infoUsuario">
+    </div>
+
+    <script>
+        
+        function obtenerParametro(nombre) {
+            var urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(nombre);
+        }
+
+        
+        var nombres = obtenerParametro("nombres");
+        var apellidos = obtenerParametro("apellidos");
+        var correo = obtenerParametro("correo");
+        var fechaNacimiento = obtenerParametro("fechaNacimiento");
+        var telefono = obtenerParametro("telefono");
+
+        var fechaNacimientoDate = new Date(fechaNacimiento);
+        var hoy = new Date();
+        var edad = hoy.getFullYear() - fechaNacimientoDate.getFullYear();
+        var mes = hoy.getMonth() - fechaNacimientoDate.getMonth();
+        if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNacimientoDate.getDate())) {
+            edad--;
+        }
+
+        document.getElementById("infoUsuario").innerHTML = `
+            <h1>${nombres}</h1>
+            <h2>${apellidos}</h2>
+            <p>Correo: <a href="mail:${correo}">${correo}</a></p>
+            <p>Teléfono: <a href="tel:${telefono}">${telefono}</a></p>
+            <p>Edad: ${edad}</p>
+        `;
+    </script>
+</body>
+</html>
