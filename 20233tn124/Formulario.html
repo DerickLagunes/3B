@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 1em;
+        border: 1px solid #ccc;
+        border-radius: 1em;
+      }
+      div + div {
+        margin-top: 1em;
+      }
+      #resultado {
+            max-width: 400px;
+            margin: 2em auto;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 1em;
+        }
+        #mensaje {
+            color: red;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Cuestionario</h1>
+    <form id="questionnaire">
+        <div>
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div>
+            <label for="apellido">Apellido:</label><br>
+            <input type="text" id="apellido" name="apellido" required>
+        </div>
+        <div>
+            <label for="correo">Correo:</label><br>
+            <input type="email" id="correo" name="correo" required>
+        </div>
+        <div>
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label><br>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+        </div>
+        <div>
+            <label for="telefono">Teléfono:</label><br>
+            <input type="tel" id="telefono" name="telefono" required>
+        </div>
+        <div>
+            <label for="usuario">Usuario:</label><br>
+            <input type="text" id="usuario" name="usuario" required>
+        </div>
+        <div>
+            <label for="contrasena">Contraseña:</label><br>
+            <input type="password" id="contrasena" name="contrasena" required>
+        </div>
+        <div>
+            <label for="confirmacionContrasena">Confirmación de la Contraseña:</label><br>
+            <input type="password" id="confirmacionContrasena" name="confirmacionContrasena" required>
+        </div>
+        <div>
+            <button type="button" onclick="procesarFormulario()">Enviar</button>
+        </div>
+        <p id="mensaje"></p>
+    </form>
+    <div id="resultado" style="display:none;"></div>
+  </body>
+</html>
