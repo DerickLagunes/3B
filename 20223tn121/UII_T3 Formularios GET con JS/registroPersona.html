@@ -1,58 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+   
+    <title>Registro de Persona</title>
 </head>
-
 <body>
-    <script src="js/script.js"></script>
-
-    <form id="miformulario" action="verPersona.html" method="get" onsubmit="return validarFormulario()">
-
-        <label for="Nombre">Nombre: </label>
-        <br>
-        <input type="text" id="Nombre" name="Nombre">
-
-        <br>
-        <label for="Apellido">Apellido:</label>
-        <br>
-        <input type="text"  id="Apellido" name="Apellido">
-        <br>
-
-        <label for="Correo">Correo:</label>
-        <br>
-        <input type="email" id="Correo" name="Correo">
-        <br>
-
-        <label for="Fecha_nacimiento">Fecha de nacimient: </label>
-        <br>
-        <input type="date" id="Fecha_nacimiento" name="Fecha_nacimiento">
-        <br>
-
-        <label for="Telefono">Telefono</label>
-        <br>
-        <input type="tel" id="Telefono" name="Telefono">
-        <br>
-
-        <label for="Usuario">Usuario</label>
-        <br>
-        <input type="text" id="Usuario" name="Usuario">
-        <br>
-
-        <label for="contraseña">contraseña</label>
-        <br>
-        <input type="password" id="contraseña" name="contraseña">
-        <br>
-
-        <label for="Rep_contra">Repetir contraseña</label>
-        <br>
-        <input type="password" id="Rep_contra" name="Rep_contra">
-
+    <h1>Formulario de Registro</h1>
+    <form id="registroForm" action="verPersona.html" method="GET">
+        <label for="nombres">Nombres:</label>
+        <input type="text" id="nombres" name="nombres" required><br><br>
+        
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" required><br><br>
+        
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" required><br><br>
+        
+        <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br><br>
+        
+        <label for="telefono">Telefono:</label>
+        <input type="tel" id="telefono" name="telefono" required><br><br>
+        
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required><br><br>
+        
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required><br><br>
+        
+        <label for="repetir_Contrasena">Repetir Contraseña:</label>
+        <input type="password" id="repetir_contrasena" name="repetir_contrasena" required><br><br>
+        
+        <input type="submit" value="Registrar">
     </form>
-    <button type="submit">Enviar</button>
 </body>
-
 </html>

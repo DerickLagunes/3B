@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css" type="text/css">
+    <title>Ver Persona</title>
+    <script>
+        // Función para calcular la edad a partir de la fecha de nacimiento
+        function calcularEdad(fechaNacimiento) {
+            const hoy = new Date();
+            const nacimiento = new Date(fechaNacimiento);
+            let edad = hoy.getFullYear() - nacimiento.getFullYear();
+            const mes = hoy.getMonth() - nacimiento.getMonth();
+            if (mes < 0 || (mes === 0 && hoy.getDate() < nacimiento.getDate())) {
+                edad--;
+            }
+            return edad;
+        }
+
+        // Función que se ejecuta cuando se hace clic en el botón para mostrar datos
+        function mostrarDatos() {
+            // Obtener los parámetros de la URL
+            const params = new URLSearchParams(window.location.search);
+            const nombres = params.get('nombres');
+            const apellidos = params.get('apellidos');
+            const correo = params.get('correo');
+            const fechaNacimiento = params.get('fecha_nacimiento');
+            const telefono = params.get('telefono');
+            const contrasena = params.get('contrasena');
+            const repetirContrasena = params.get('repetir_contrasena');
+
+            // Calcular la edad
+            const edad = calcularEdad(fechaNacimiento);
+            const mensajeError = document.getElementById('mensajeError');
+
+            // Validar las contraseñas
+            if (contrasena !== repetirContrasena) {
+                mensajeError.textContent = "Las contraseñas no coinciden";
+                return;
+            }
+
+            // Validar la longitud de la contraseña
+            if (contrasena.length < 5) {
+                mensajeError.textContent = "La contraseña es insegura";
+                return;
+            }
+
+            // Asignar los valores a los elementos HTML
+            document.getElementById('nombreCompleto').textContent = nombres;
+            document.getElementById('apellidos').textContent = apellidos;
+            document.getElementById('correo').href = `mailto:${correo}`;
+            document.getElementById('correo').textContent = correo;
+            document.getElementById('telefono').href = `tel:${telefono}`;
+            document.getElementById('telefono').textContent = telefono;
+            document.getElementById('edad').textContent = `Edad: ${edad} años`;
+        }
+    </script>
+</head>
+<body>
+    <h1 id="nombreCompleto"></h1>
+    <h2 id="apellidos"></h2>
+    <a id="correo"></a><br>
+    <a id="telefono"></a><br>
+    <p id="edad"></p>
+    <p id="mensajeError" style="color:red;"></p>
+    <!-- Botón para mostrar los datos -->
+    <button onclick="mostrarDatos()">Mostrar Datos</button>
+</body>
+</html>
+
