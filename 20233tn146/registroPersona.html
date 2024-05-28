@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Registro Persona</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='scrip.js'></script>
+</head>
+
+<body>
+ <div style="text-align: center;">
+    <div style="display: inline-block;vertical-align: middle;background-color: #FFFF77;">
+    <h1 class="titulo">Registra una persona</h1>
+    <form action="verPersona.html" id="formPersona">
+        <label for="nombre"> Nombre
+            <input type="text" name="nombrePersona" id="input_nombrePersona" placeholder="Ingresa el nombre">
+        </label>
+        <br><br>
+        <label for="apellidos">Apellidos
+            <input type="text" name="apellidosPersona" id="input_apellidosPersona" placeholder="Ingresa los apellidos">
+        </label> <br><br>
+        <label for="email">Email
+            <input type="email" name="emailPersona" id="input_emailPersona" placeholder="Ingresa el email">
+        </label> <br><br>
+        <label for="fechaNacimiento">Fecha de nacimiento
+            <input type="date" name="fechaNacimiento" id="input_FechaNacimiento">
+        </label> <br><br>
+        <label for="numeroTelefono">Número de teléfono
+            <input type="number" name="numeroTelefono" id="input_numeroTelefono"
+                placeholder="Ingresa el número de teléfono">
+        </label> <br><br>
+        <label for="usuarioPersona">Usuario
+            <input type="text" name="usuarioPersona" id="input_usuarioPersona"
+                placeholder="Ingresa el nombre de usuario">
+        </label><br><br>
+        <label for="password">Contraseña
+            <input type="password" name="contraseniaPersona" id="input_contraseniaPersona"
+                placeholder="Ingresa la contraseña">
+        </label> <br><br>
+        <label for="contraseniaPersona2">Ingrese nuevamente la contraseña
+            <input type="password" name="confirmacioncontra" id="input_confirmacioncontra"
+                placeholder="Ingresa la contraseña">
+        </label> <br><br>
+        <input type="submit" name="Registrar persona" id="submit_registrarPersona">
+    </form>
+    <script src="scrip.js"></script>
+</body>
+
+</html>
