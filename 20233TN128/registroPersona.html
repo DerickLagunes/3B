@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset='utf-8'>
+    <title>Formulario</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/estiloForm.css'>
+</head>
+<body>
+    <div class="formulario">
+    <form action="verPersona.html" method="get" class="formulario">
+        <h1>Registro de persona</h1>
+        <label> Nombre(s):
+            <input type="text" name="nombrePersona" id="nombrePersona" required/>
+        </label> <br><br>
+        <label> Apellidos:
+            <input type="text" name="apellidos" id="apellidos" required/>
+        </label> <br><br>
+        <label> Correo: 
+            <input type="email" name="email" id="email" required/>
+        </label> <br><br>
+        <label> Fecha de nacimiento:
+            <input type="date" name="fechaNacimiento" id="fechaNacimiento" required/>
+        </label> <br><br>
+        <label> Teléfono: 
+            <input type="text" name="telefono" id="telefono" required/>
+        </label> <br><br>
+        <label> Usuario: 
+            <input type="text" name="usuario" id="usuario" required/>
+        </label> <br><br>
+        <label> Contraseña:
+            <input type="password" name="contrasenia" id="contrasenia" required/>
+        </label> <br><br>
+        <label> Repetir contraseña:
+            <input type="password" name="contraseniaRepetida" id="contraseniaRepetida" required/>
+        </label> <br><br>
+     
+        <input type="submit" value="Registrar" class="enviar"/><br><br>
+    </form>
+    </div>
+</body>
+</html>
