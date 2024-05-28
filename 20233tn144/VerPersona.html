@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Persona</title>
+    <script>
+        function calcularEdad(fechaNacimiento) {
+            const hoy = new Date();
+            const nacimiento = new Date(fechaNacimiento);
+            let edad = hoy.getFullYear() - nacimiento.getFullYear();
+            const mes = hoy.getMonth() - nacimiento.getMonth();
+            if (mes < 0 || (mes === 0 && hoy.getDate() < nacimiento.getDate())) {
+                edad--;
+            }
+            return edad;
+        }
+
+        function mostrarInformacion() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const nombres = urlParams.get('nombres');
+            const apellidos = urlParams.get('apellidos');
+            const correo = urlParams.get('correo');
+            const fechaNacimiento = urlParams.get('fecha_nacimiento');
+            const telefono = urlParams.get('telefono');
+
+            const edad = calcularEdad(fechaNacimiento);
+
+            document.getElementById('nombres').textContent = nombres;
+            document.getElementById('apellidos').textContent = apellidos;
+            document.getElementById('correo').href = `mailto:${correo}`;
+            document.getElementById('correo').textContent = correo;
+            document.getElementById('telefono').href = `tel:${telefono}`;
+            document.getElementById('telefono').textContent = telefono;
+            document.getElementById('edad').textContent = `Edad: ${edad} años`;
+        }
+
+        window.onload = mostrarInformacion;
+    </script>
+</head>
+<body>
+    <h1 id="nombres"></h1>
+    <h2 id="apellidos"></h2>
+    <p>Correo: <a id="correo" href=""></a></p>
+    <p>Teléfono: <a id="telefono" href=""></a></p>
+    <p id="edad"></p>
+</body>
+</html>
