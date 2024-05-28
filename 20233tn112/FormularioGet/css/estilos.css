@@ -1,0 +1,14 @@
+body{
+    background-image: url(../img/fondo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+    input{
+        margin-left: 10px;
+        border: black 3px solid;
+        align-content: center;
+        box-shadow: 0 0 20px rgb(176, 139, 236);
+        border-radius: 10px;
+        
+    }
+   
