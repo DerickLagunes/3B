@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Persona</title>
+</head>
+<body style="background-color: aquamarine;">
+    <center> 
+    <script>
+        const url = new URL(window.location.href);
+        const nombres = url.searchParams.get("nombres");
+        const apellidos = url.searchParams.get("apellidos");
+        const correo = url.searchParams.get("correo");
+        const fechaNacimiento = url.searchParams.get("fechaNacimiento");
+        const telefono = url.searchParams.get("telefono");
+        const usuario = url.searchParams.get("usuario");
+        const contrasena = url.searchParams.get("contrasena");
+
+        const fechaActual = new Date();
+        const fechaNacimientoDate = new Date(fechaNacimiento);
+        const edad = fechaActual.getFullYear() - fechaNacimientoDate.getFullYear();
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("nombres").textContent = nombres;
+            document.getElementById("apellidos").textContent = apellidos;
+            document.getElementById("correo").textContent = correo;
+            document.getElementById("correoLink").href = `mailto:${correo}`;
+            document.getElementById("telefono").textContent = telefono;
+            document.getElementById("telefonoLink").href = `tel:${telefono}`;
+            document.getElementById("edad").textContent = edad;
+        });
+    </script>
+
+    <h1>Información de Persona</h1>
+
+    <h2 id="nombres"></h2>
+    <h2 id="apellidos"></h2>
+    <a href="#" id="correoLink"></a>
+    <p id="correo"></p>
+    <a href="#" id="telefonoLink"></a>
+    <p id="telefono"></p>
+    <p>Edad: <span id="edad"></span></p>
+    <img src="img/pikachu y togepi aplaudiendo.gif" alt="gif de pikachu y togepi aplaudiendo"> 
+</center>
+</body>
+</html>
+
