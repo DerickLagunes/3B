@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Registro | Formulario</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+</head>
+<body>
+
+    <h1>REGISTRO</h1> <hr>
+    <form method="get" id="registro">
+        <label>Nombres:</label>
+        <input type="text" name="nombres" id="nombres"><br> 
+        <label>Apellidos:</label>
+        <input type="text" name="apellidos" id="apellidos"><br>
+        <label>Email:</label>
+        <input type="email" name="email" id="email"><br>
+        <label>Fecha de nacimiento:</label>
+        <input type="date" name="nacimiento" id="nacimiento"><br>
+        <label>Telefono:</label>
+        <input type="tel" name="telefono" id="telefono"><br>
+        <label>Usuario:</label>
+        <input type="text" name="user" id="user"><br>
+        <label>Contraseña:</label>
+        <input type="password" name="contra" id="contra"><br>
+        <label>Repetir contraseña:</label>
+        <input type="password" name="repcontra" id="repcontra"><br>
+        <button type="submit">Registrar</button>
+    </form>
+
+    <p id="mensaje"></p>
+
+    <style>
+        body{
+            text-align: center;
+        }
+
+        input{
+            margin: 10px;
+        }
+    </style>
+
+    <script src="main.js"></script>
+</body>
+</html>

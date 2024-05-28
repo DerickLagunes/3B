@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Persona</title>
+</head>
+
+<body>
+    <h1>Datos del Formulario</h1>
+    <div id="datos"></div>
+
+    <script>
+        function tenerParametro(nombre) {
+            var urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(nombre);
+        }
+
+
+        var nombres = tenerParametro("nombres");
+        var apellidos = tenerParametro("apellidos");
+        var email = tenerParametro("email");
+        var nacimiento = tenerParametro("nacimiento");
+        var telefono = tenerParametro("telefono");
+        var user = tenerParametro("user");
+        var contra = tenerParametro("contra");
+        var repcontra = tenerParametro("repcontra");
+
+        var hoy = new Date();
+        var fechaNacimiento = new Date(nacimiento);
+        var edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
+        var mes = hoy.getMonth() - fechaNacimiento.getMonth();
+        if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNacimiento.getDate())) {
+            edad--;
+        }
+
+
+
+        var datosForm = document.getElementById("datos");
+        datosForm.innerHTML =
+            "<p>Nombres: " + nombres + "</p>" +
+            "<p>Apellidos: " + apellidos + "</p>" +
+            "<p>Email: <a href='mailto:" + email + "' target='_blank'>" + email + "</a></p>" +
+            "<p>Fecha de nacimiento: " + nacimiento + "</p>" +
+            "<p>Teléfono: <a href='tel:" + telefono + "'>" + telefono + "</a></p>" +
+            "<p>Usuario: " + user + "</p>" +
+            "<p>Contraseña: " + contra + "</p>" +
+            "<p>Repetir contraseña: " + repcontra + "</p>";
+
+
+
+        if (contra !== repcontra) {
+            datosDiv.innerHTML += "<p style='color: red;'>Las contraseñas no coinciden</p>";
+        }
+
+
+        if (contra.length < 5) {
+            datosDiv.innerHTML += "<p style='color: red;'>¡Advertencia! La contraseña es insegura.</p>";
+        }
+
+
+
+    </script>
+</body>
+
+</html>
