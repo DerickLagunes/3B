@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Formularios GET</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body style="background-color: rgba(69, 201, 188, 0.623)">
+  <div>
+    <h1>Bienvenido al formulario</h1>
+    <div>
+      <form id="miFormulario" action="verPersona.html" style="background: center">
+        <label>Nombres:</label>
+        <input id="nombres" type="text" name="nombres" maxlength="20" />
+        <br /><br />
+
+        <label>Apellidos:</label>
+        <input id="apellidos" type="text" name="apellidos" maxlength="20" required />
+        <br /><br />
+
+        <label>Correo:</label>
+        <input id="correo" type="email" name="correo" maxlength="35" required />
+        <br /><br />
+
+        <label>Fecha de nacimiento:</label>
+        <input id="fechaNacimiento" type="date" name="fechaNacimiento" required />
+        <br /><br />
+
+        <label>Teléfono:</label>
+        <input id="telefono" type="text" name="telefono" required maxlength="10" />
+        <br /><br />
+
+        <label>Usuario:</label>
+        <input id="usuario" type="text" name="usuario" maxlength="10" required />
+        <br /><br />
+
+        <label>Contraseña:</label>
+        <input id="contraseña" type="password" name="contraseña" maxlength="8" required />
+        <br /><br />
+
+        <label>Repetir contraseña:</label>
+        <input id="repetirContraseña" type="password" name="repetirContraseña" maxlength="8" required />
+        <br /><br />
+        <input value="Enviar" type="submit" style="margin-left: 20vh; background-color: red; color: white"></input>
+        <br />
+      </form>
+    </div>
+  </div>
+  <script src="js/contraseñas.js"></script>
+  <script src="js/enviarDatos.js"></script>
+  <!--muestra una alerta si las contraseñas no son iguales(se mostrara tambien en verPersona)-->
+</body>
+
+</html>
