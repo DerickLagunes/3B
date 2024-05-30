@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffd3f7;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 400px;
+    background-color: #cebaff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(223, 183, 225, 0.1);
+    text-align: center;
+    margin: 50px auto;
+}
+
+#userInfo {
+    text-align: center;
+}
+
+#userInfo h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+#userInfo h2 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+#userInfo p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+#edad {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+a {
+    color: #ffc8eb;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
