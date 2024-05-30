@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Persona</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 1em;
+        }
+        label {
+            margin-top: 1em;
+            display: block;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="tel"],
+        input[type="password"] {
+            width: 100%;
+            padding: 0.5em;
+            margin-top: 0.5em;
+            border: 1px solid #ccc;
+            border-radius: 0.5em;
+        }
+        input[type="submit"] {
+            margin-top: 1em;
+            padding: 0.7em;
+            border: none;
+            border-radius: 0.5em;
+            background-color: #28a745;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        p {
+            color: red;
+        } 
+    </style>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Registro de Persona</h1>
+    <form id="registro" onsubmit="return validarContrasena()" method="GET" action="verPersona.html">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre"><br><br>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required><br><br>
+
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" placeholder="Correo electrónico"><br><br>
+
+        <label for="fechaNacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento"><br><br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="number" id="telefono" name="telefono" placeholder="Número de teléfono"><br><br>
+
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" placeholder="Nombre de usuario"><br><br>
+
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña"><br><br>
+
+        <label for="repetirContrasena">Repetir contraseña:</label>
+        <input type="password" id="repetirContrasena" name="repetirContrasena" placeholder="Repite tu contraseña" required><br><br>
+
+        <p id="mensaje"></p>
+        
+        <input type="submit" value="Registrar">
+    </form>
+</body>
+</html>
