@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Registro de Persona</title>
+</head>
+<body>
+    <script src="js/script.js">    </script>
+    <h1>Formulario de Registro</h1>
+    <div class="container">
+    <form id="registroForm" action="index.html" method="get"> <!-- action regresa la informacion al archivo puestp-->
+        <label for="nombres">Nombres:</label>
+        <input type="text" id="nombres" name="nombres" required><br><br>
+        
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" required><br><br>
+        
+        <label for="Matricula">Matricula:</label>
+        <input type="text" id="matricula" name="matricula" required><br><br>
+        
+   <button onclick="mostrarDatos()">Mostrar Datos</button>
+    </form>
+ 
+    </div>
+    <h1 id="nombres"></h1>
+    <h2 id="apellidos"></h2>
+    <h2 id="matricula"></h2>
+</body>
+</html>
