@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Piedra, Papel o Tijera</title>
+</head>
+<body>
+    <img id="img_id1" src="" alt="imagen1">
+    <img id="img_id2" src="" alt="imagen2">
+    <button id="juego">Jugar</button>
+    <h1 id="resultado"></h1>
+
+    <script>
+        const img = [
+            'img/piedra.jpg', // Piedra
+            'img/tijera.jpg', // Tijera
+            'img/papel.jpg'   // Papel
+        ];
+
+        const imgElement1 = document.getElementById('img_id1');
+        const imgElement2 = document.getElementById('img_id2');
+        const juegoBtn = document.getElementById('juego');
+        const resultadoElement = document.getElementById('resultado');
+
+        function jugarPiedraPapelTijera(opcion1, opcion2) {
+            if (opcion1 === opcion2) {
+                return "Empate";
+            } else if (
+                (opcion1 === 'img/piedra.jpg' && opcion2 === 'img/tijera.jpg') ||
+                (opcion1 === 'img/tijera.jpg' && opcion2 === 'img/papel.jpg') ||
+                (opcion1 === 'img/papel.jpg' && opcion2 === 'img/piedra.jpg')
+            ) {
+                return "Ganaste";
+            } else {
+                return "Perdiste";
+            }
+        }
+
+        function mostrarImagenesAleatorias() {
+            const indice1 = Math.floor(Math.random() * img.length);
+            let indice2;
+            do {
+                indice2 = Math.floor(Math.random() * img.length);
+            } while (indice2 === indice1);
+
+            const opcion1 = img[indice1];
+            const opcion2 = img[indice2];
+
+            imgElement1.src = opcion1;
+            imgElement2.src = opcion2;
+
+            const resultado = jugarPiedraPapelTijera(opcion1, opcion2);
+            resultadoElement.textContent = resultado;
+        }
+
+        juegoBtn.addEventListener('click', mostrarImagenesAleatorias);
+
+        // Mostrar imágenes aleatorias al cargar la página
+        mostrarImagenesAleatorias();
+    </script>
+</body>
+</html>
