@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Formulario dinámico</title>
+    <link rel='stylesheet' type='text/css' href='css/bootstrap.css'>
+    <link rel="icon" type="image/png" href="img/fc.png">
+
+    <style>
+        body {
+            background-color: #eedbff; 
+        }
+        .btn-verde-pastel {
+            background-color: #d8ffd8; 
+            border-color: #d8ffd8;
+            color: #000; 
+        }
+        .btn-amarillo-pastel {
+            background-color: #ffffd2; 
+            border-color: #ffffd2;
+            color: #000; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form id="formularios">
+                    <div class="mb-3">
+                      <label for="nombre" class="form-label">Nombre: </label>
+                      <input name="nombres" type="text" class="form-control" id="nombres" aria-describedby="ayudaNombre">
+                      <div id="ayudaNombre" class="form-text">Ingrese su nombre por favor.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="matri" class="form-label">Matrícula: </label>
+                      <input name="matri" type="text" class="form-control" id="matri">
+                    </div>
+                    <button id="nuevo" type="button" class="btn btn-verde-pastel">Nuevo registro</button>
+                    <button type="submit" class="btn btn-amarillo-pastel">Registrar</button>
+                  </form>
+            </div>
+            <div class="col">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Integrante</th>
+                            <th>Matrícula</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contenido">
+
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src='js/script.js'></script>
+</body>
+</html>
