@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+   <link rel="stylesheet" href="bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <form id="formulario">
+            <div class="mb-3">
+                <label for="numero1" class="form-label">Número 1: </label>
+                <input name="numero1" type="number" class="form-control" id="numero1">
+            </div>
+            <div class="mb-3">
+                <label for="numero2" class="form-label">Número 2: </label>
+                <input name="numero2" type="number" class="form-control" id="numero2">
+            </div>
+            <div class="mb-3">
+                <label for="resultado" class="form-label">Resultado: </label>
+                <input name="resultado" type="text" class="form-control" id="resultado" readonly>
+            </div>
+            <button id="suma" type="button" class="btn btn-success">Suma</button>
+            <button id="resta" type="button" class="btn btn-success">Resta</button>
+            <button id="multiplicacion" type="button" class="btn btn-success">Multiplicación</button>
+            <button id="division" type="button" class="btn btn-success">División</button>
+        </form>
+    </div>
+
+    <script src="script.js"> </script>
+</body>
+</html>
